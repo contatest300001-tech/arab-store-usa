@@ -1,1 +1,113 @@
 Index.html
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ARAB STORE USA - Perfumaria Premium 👑</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <!-- HEADER -->
+    <header class="header">
+        <div class="container">
+            <div class="logo">
+                <span class="coroa">👑</span>
+                <h1>ARAB STORE USA</h1>
+            </div>
+            <nav class="nav">
+                <ul>
+                    <li><a href="#produtos">Catálogo</a></li>
+                    <li><a href="#contato">Contato</a></li>
+                    <li><a href="admin.html" class="admin-btn">Admin</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <!-- HERO SECTION -->
+    <section class="hero">
+        <div class="hero-content">
+            <h2>Perfumaria Árabe Orginal 💯</h2>
+            <p>Produtos Premium com os Melhores Preços</p>
+            <p class="destaque">ATACADO E VAREJO</p>
+            <button class="cta-btn" onclick="document.getElementById('produtos').scrollIntoView()">Ver Catálogo</button>
+        </div>
+    </section>
+
+    <!-- BANNER PROMO -->
+    <section class="promo-banner">
+        <h3>⭐ ATACADO MÍNIMO 3 PEÇAS ⭐</h3>
+    </section>
+
+    <!-- PRODUTOS -->
+    <section id="produtos" class="produtos">
+        <div class="container">
+            <h2>Nossos Produtos</h2>
+            <div class="filtros">
+                <button class="filtro-btn ativo" onclick="filtrarMarca('todos')">Todos</button>
+                <button class="filtro-btn" onclick="filtrarMarca('LATTAFA')">LATTAFA</button>
+                <button class="filtro-btn" onclick="filtrarMarca('AL WATANIAH')">AL WATANIAH</button>
+                <button class="filtro-btn" onclick="filtrarMarca('ARMAF')">ARMAF</button>
+                <button class="filtro-btn" onclick="filtrarMarca('ARQUS')">ARQUS</button>
+                <button class="filtro-btn" onclick="filtrarMarca('MAISON ALHAMBRA')">MAISON ALHAMBRA</button>
+            </div>
+            <div class="grid-produtos" id="gridProdutos"></div>
+        </div>
+    </section>
+
+    <!-- CONTATO -->
+    <section id="contato" class="contato">
+        <div class="container">
+            <h2>Fale Conosco</h2>
+            <div class="contato-container">
+                <div class="contato-info">
+                    <h3>📱 WhatsApp</h3>
+                    <p>Entre em contato direto via WhatsApp</p>
+                    <a href="https://wa.me/5519981367770?text=Olá! Tenho interesse nos produtos da ARAB STORE USA" class="whatsapp-btn" target="_blank">
+                        💬 Chat WhatsApp
+                    </a>
+                </div>
+                <div class="contato-info">
+                    <h3>💳 Formas de Pagamento</h3>
+                    <ul>
+                        <li>✅ Cartão de Crédito</li>
+                        <li>✅ PIX</li>
+                        <li>✅ WhatsApp Pay</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- MODAL PRODUTO -->
+    <div id="modalProduto" class="modal">
+        <div class="modal-content">
+            <span class="close" onclick="fecharModal()">&times;</span>
+            <div class="modal-body">
+                <h2 id="modalNome"></h2>
+                <h3 id="modalMarca" class="marca"></h3>
+                <div class="precos">
+                    <div class="preco-item">
+                        <p>Preço Atacado (mín. 3 peças)</p>
+                        <h3 id="modalAtacado" class="preco-atacado"></h3>
+                    </div>
+                    <div class="preco-item">
+                        <p>Preço Varejo</p>
+                        <h3 id="modalVarejo" class="preco-varejo"></h3>
+                    </div>
+                </div>
+                <button class="comprar-btn" onclick="abrirWhatsapp()">Solicitar Orçamento</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- FOOTER -->
+    <footer class="footer">
+        <p>&copy; 2026 ARAB STORE USA - Perfumaria Premium 👑</p>
+        <p>Todos os direitos reservados</p>
+    </footer>
+
+    <script src="js/app.js"></script>
+</body>
+</html>
